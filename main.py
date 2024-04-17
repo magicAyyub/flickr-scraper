@@ -1,6 +1,14 @@
-import tkinter as tk
-from tkinter import ttk
-from tkinter import messagebox
+import sys
+
+# Import tkinter following 
+if sys.version_info[0] == 3:
+    import tkinter as tk
+    from tkinter import ttk
+    from tkinter import messagebox
+else:
+    import Tkinter as tk
+    from Tkinter import ttk
+    from Tkinter import messagebox
 from flickrscraper import FlickrScraper
 import threading
 
@@ -11,13 +19,13 @@ class FlickrScraperApp:
         self.root.title("Flickr Scraper")
         self.root.geometry("400x200")
 
-        self.url_label = ttk.Label(self.root, text="URL de la page Flickr à scrapper", font=("Helvetica", 12))
+        self.url_label = ttk.Label(self.root, text="URL of Flickr page to scrape", font=("Helvetica", 12))
         self.url_label.pack(pady=(10, 5))
 
         self.url_entry = ttk.Entry(self.root, width=50, font=("Helvetica", 10))
         self.url_entry.pack(pady=5)
 
-        self.max_images_label = ttk.Label(self.root, text="Nombre limite d'image (facultatif)", font=("Helvetica", 12))
+        self.max_images_label = ttk.Label(self.root, text="Image limit (optional)", font=("Helvetica", 12))
         self.max_images_label.pack(pady=(10, 5))
 
         self.max_images_entry = ttk.Entry(self.root, width=10, font=("Helvetica", 10))

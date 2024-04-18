@@ -44,7 +44,7 @@ pip install -r requirements.txt
    pip install tk
    ```
 
-5. Install driver for Unix system:
+5. Install driver for Unix system (Windows users skip):
 
    - Navigate to a bin folder:
    ```bash
@@ -68,7 +68,7 @@ pip install -r requirements.txt
 
 6. Install driver for Windows:
    - Get the latest driver for your system [Here](https://github.com/mozilla/geckodriver/releases) and then download it.
-   - Unzip it in a folder and add the path of the .exe to the system path.
+   - Unzip it in a folder and add the path of the .exe folder to the system path.
 
 ## 🚀 Usage
 

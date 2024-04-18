@@ -2,7 +2,7 @@
 
 This is a Python application for scraping images from Flickr using Selenium and BeautifulSoup.
 
-## Installation
+## 💻 Installation
 
 1. Clone the repository:
 
@@ -22,32 +22,55 @@ cd flickr-scraper
 pip install -r requirements.txt
 ```
 
-4. Install tkinter 
+4. Install tkinter for a specific system:
 
-- For Ubuntu or other distros with apt :
+   - For Ubuntu or other distros with apt:
+   ```bash
+   sudo apt-get install python3-tk
+   ```
 
-```bash
-sudo apt-get install python3-tk
-```
+   - For Fedora:
+   ```bash
+   sudo dnf install python3-tkinter
+   ```
 
-- For Fedora:
-```bash
-sudo dnf install python3-tkinter
-```
+   - For Mac:
+   ```bash
+   brew install python-tk
+   ```
 
-- For Mac :
+   - For Windows:
+   ```bash
+   pip install tk
+   ```
 
-```bash
-brew install python-tk
-```
+5. Install driver for Unix system:
 
-- For Windows:
+   - Navigate to a bin folder:
+   ```bash
+   cd /usr/bin
+   ```
 
-```bash
-pip install tk
-```
+   - Get the latest driver download link [Here](https://github.com/mozilla/geckodriver/releases) and then download it like that:
+   ```bash
+   sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-linux64.tar.gz
+   ```
 
-## Usage
+   - Unzip the package:
+   ```bash
+   sudo tar -xvzf geckodriver*
+   ```
+
+   - Provide all privileges:
+   ```bash
+   sudo chmod +x geckodriver
+   ```
+
+6. Install driver for Windows:
+   - Get the latest driver for your system [Here](https://github.com/mozilla/geckodriver/releases) and then download it.
+   - Unzip it in a folder and add the path of the .exe to the system path.
+
+## 🚀 Usage
 
 To use the Flickr Scraper, follow these steps:
 
@@ -56,14 +79,6 @@ To use the Flickr Scraper, follow these steps:
 ```bash
 python main.py
 ```
-
-2. Enter the URL of the Flickr page you want to scrape images from.
-
-3. Optionally, specify the maximum number of images to scrape. If not provided, it will default to 200.
-
-4. Click the "Scrape" button to start the scraping process.
-
-5. Wait for the process to finish. Once completed, the images will be saved in the `scraped_images` directory.
 
 ## License
 
